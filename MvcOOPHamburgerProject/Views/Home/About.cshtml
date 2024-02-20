@@ -1,0 +1,54 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "About";
+}
+
+<!--Header-->
+<partial name="_Header" />
+<!--About-->
+<section class="about_section layout_padding">
+    <div class="container">
+    <h2 class=" text-secondary fw-light">About Us</h2>
+    <hr />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="~/customer/images/@item.ImageUrl" class="img-fluid rounded-start" alt="icon" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Title</h5>
+                                <p class="card-text">@item.Description</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    </div>
+    <hr />
+</section>
+<!--Header-->
+<partial name="_Footer" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

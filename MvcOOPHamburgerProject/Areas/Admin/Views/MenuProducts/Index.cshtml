@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MvcOOPHamburgerProject.Data.Entities.Concrete.MenuProduct>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@foreach (var menuProductGroup in Model.GroupBy(mp => mp.Menu.Name))
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <img src="~/customer/img/menu/@menuProductGroup.First().Menu.ImageUrl" class="img-fluid rounded-start" alt="@menuProductGroup.Key">
+            <h2 class="card-title">@menuProductGroup.Key</h2>
+
+            <ul class="list-group list-group-flush">
+                @foreach (var item in menuProductGroup)
+                {
+                    <li class="list-group-item">
+                        <span>@item.Product.Name</span>
+                        <span class="float-end">@item.Quantity</span>
+                        <div>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}

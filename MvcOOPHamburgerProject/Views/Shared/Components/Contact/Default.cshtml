@@ -1,0 +1,40 @@
+﻿@model MvcOOPHamburgerProject.Data.Entities.Concrete.Contact
+
+<!-- start contact section -->
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2 class="border-bottom">Contact Us</h2>
+            <hr />
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form method="post">
+                        <div class="form-group">
+                            <input asp-for="Name" class="form-control" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" />
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <textarea asp-for="Message" class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="btn_box">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container ">
+                    <div id="googleMap"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
