@@ -1,6 +1,282 @@
 ﻿@using MvcOOPHamburgerProject.Areas.Admin.Models
 @model DashboardViewModel
-@{
-    ViewData["Title"] = "Dashboard";
-}
 
+<style>
+    .card {
+        background-color: rgb(240, 240, 240);
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+        background-color: rgb(230, 156, 0);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        color: white;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .table th {
+        background-color: rgb(230, 156, 0);
+        color: white;
+    }
+</style>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Total Amount of Customers</h3>
+    </div>
+    <div class="card-body">
+        <p>@ViewBag.TotalAmountofCustomers</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Most Ordered Product</h3>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.MostOrderedProduct != null)
+        {
+            <p>The most ordered product is: @ViewBag.MostOrderedProduct.ProductName</p>
+            <p>Total Orders: @ViewBag.MostOrderedProduct.TotalOrdersOfProduct</p>
+        }
+        else
+        {
+            <p>No orders found.</p>
+        }
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Most Ordered Menu</h3>
+    </div>
+    <div class="card-body">
+        @if (ViewBag.MostOrderedMenu != null)
+        {
+            <p>The most ordered menu is: @ViewBag.MostOrderedMenu.MenuName</p>
+            <p>Total Orders: @ViewBag.MostOrderedMenu.TotalOrdersOfMenu</p>
+        }
+        else
+        {
+            <p>No orders found.</p>
+        }
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Top 10 Customers</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Total Orders Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in ViewBag.TopCustomers)
+                {
+                    <tr>
+                        <td>@customer.CustomerName</td>
+                        <td>@customer.TotalOrdersAmount</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Recently Added 10 Products</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in ViewBag.RecentlyAdded10Products)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Recently Added 10 Menus</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Menu Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var menu in ViewBag.RecentlyAdded10Menus)
+                {
+                    <tr>
+                        <td>@menu.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Recently Added 10 Testimonials</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Testimonials Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var testimonials in ViewBag.RecentlyAdded10Testimonials)
+                {
+                    <tr>
+                        <td>@testimonials.Title</td>
+                        <td>@testimonials.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Most Ordered Categories</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Category Name</th>
+                    <th>Total Orders</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.MostOrderedCategories != null)
+                {
+                    @foreach (var category in ViewBag.MostOrderedCategories)
+                    {
+                        <tr>
+                            <td>@category.CategoryName</td>
+                            <td>@category.TotalOrders</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="2">No data available</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Daily Earnings</h3>
+    </div>
+    <div class="card-body">
+        <p>Today's earnings: @ViewBag.DailyEarning.ToString("C2")</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Weekly Earnings</h3>
+    </div>
+    <div class="card-body">
+        <p>This week's earnings: @ViewBag.WeeklyEarning.ToString("C2")</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Monthly Earnings</h3>
+    </div>
+    <div class="card-body">
+        <p>This month's earnings: @ViewBag.MonthlyEarning.ToString("C2")</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>Earnings Chart</h3>
+    </div>
+    <div class="card-body">
+        <canvas id="earningsChart" width="400" height="200"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var ctx = document.getElementById('earningsChart').getContext('2d');
+        var earningsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Daily', 'Weekly', 'Monthly'],
+                datasets: [{
+                    label: 'Earnings',
+                    data: [
+        @ViewBag.DailyEarning,
+        @ViewBag.WeeklyEarning,
+        @ViewBag.MonthlyEarning
+                            ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+}

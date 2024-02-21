@@ -54,6 +54,7 @@ namespace MvcOOPHamburgerProject.Controllers
             return View();
         }
 
+
         [HttpGet]
         public async Task<IActionResult> OurMenu(int? categoryId)
         {
@@ -208,6 +209,8 @@ namespace MvcOOPHamburgerProject.Controllers
                     }
                 }
                 order.TotalPrice = totalPrice;
+                _db.Update(order);
+                _db.SaveChanges();
 
                 return View(order);
             }

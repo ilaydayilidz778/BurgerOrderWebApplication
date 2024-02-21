@@ -86,14 +86,6 @@ main {
             background-color: #e69c00;
         }
 
-dropdown-menu {
-    background-color: #ffbe33;
-    color: #ffffff;
-}
-
-dropdown-item {
-    color: #ffbe33;
-}
 
 .custom_nav-container .navbar-toggler {
     outline: none;

@@ -42,7 +42,7 @@ namespace MvcOOPHamburgerProject.Areas.Identity.Pages.Account
 
                 // Siparişleri getir ve sadece ready veya delivery olanları seç
                 var ordersToRemove = _context.Orders
-                    .Where(o => o.UserId == user.Id && !(o.Status == OrderStatus.Ready || o.Status == OrderStatus.Delivered));
+                    .Where(o => o.UserId == user.Id && !(o.Status == OrderStatus.Confirmed || o.Status == OrderStatus.Ready || o.Status == OrderStatus.Delivered));
 
                 // Seçilen siparişleri sil
                 _context.Orders.RemoveRange(ordersToRemove);
