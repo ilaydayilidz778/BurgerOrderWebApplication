@@ -434,13 +434,14 @@ a:focus {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        height: 215px;
+        height: 250px;
         margin: -1px;
         padding: 10px;
     }
 
         .food_section .box .img-box img {
             max-width: 100%;
+            height: 215px;
             -webkit-transition: all .2s;
             transition: all .2s;
         }
@@ -498,7 +499,6 @@ a:focus {
 .food_section a:hover {
     background-color: #e69c00;
 }
-
 
 
 

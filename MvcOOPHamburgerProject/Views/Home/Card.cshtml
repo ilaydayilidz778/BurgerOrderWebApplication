@@ -3,67 +3,99 @@
 @{
     ViewData["Title"] = "Card";
 }
+<partial name="_Header" />
+<style>
+    .order_section {
+        padding: 20px;
+    }
 
-<h1>Your Card</h1>
-<div>
-    <h6>Order ID: @Model.Id</h6>
-    <h6>Date: @Model.Date</h6>
-    <h6>Status: @Model.Status</h6>
+    .order-card {
+        background-color: #192a56;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #fff; /* Yazı rengi beyaz */
+        padding: 20px;
+        margin: 20px;
+    }
 
-    <h3>Order Items:</h3>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.OrderDetails)
-            {
-                <tr>
-                    <td>
-                        @if (item.Product != null)
+        .order-card h4,
+        .order-card h6 {
+            background-color: rgba(255, 215, 0, 0.7);
+        }
+
+        .order-card table th {
+            background-color: darkred;
+            color: #fff; 
+        }
+
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<section class="order_section">
+    <div class="container">
+        <div class="order-card">
+            <div>
+                <h4>Your Card</h4>
+                <h6>Order ID: @Model.Id</h6>
+                <h6>Date: @Model.Date</h6>
+                <h6>Status: @Model.Status</h6>
+
+                <h3>Order Items:</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderDetails)
                         {
-                            @item.Product.Name
+                            <tr>
+                                <td>
+                                    @if (item.Product != null)
+                                    {
+                                        @item.Product.Name
+                                    }
+                                    else if (item.Menu != null)
+                                    {
+                                        @item.Menu.Name
+                                    }
+                                </td>
+                                <td>
+                                    <div>
+                                        @item.Quantity
+                                    </div>
+                                </td>
+                                <td>
+                                    @item.TotalPrice.ToString("C2")
+                                </td>
+                                <td>
+                                    <form asp-area="" asp-controller="Home" asp-action="DeleteOrderDetail" method="post">
+                                        <button class="btn btn-danger" type="submit" name=orderDetailId value="@item.Id"><i class="fa-solid fa-trash"></i></button>
+                                    </form>
+                                    <form asp-area="" asp-controller="Home" asp-action="EditOrderDetail" method="get">
+                                        <button class="btn btn-success" type="submit" name="orderDetailId" value="@item.Id" data-toggle="modal" data-target="#editOrderDetailModal"><i class="fa-solid fa-pen"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
                         }
-                        else if (item.Menu != null)
-                        {
-                            @item.Menu.Name
-                        }
-                    </td>
-                    <td>
-                        <div>
-                            @item.Quantity
-                        </div>
-                    </td>
-                    <td>
-                        @item.TotalPrice.ToString("C2")
-                    </td>
-                    <td>
-                        <form asp-area="" asp-controller="Home" asp-action="DeleteOrderDetail" method="post">
-                            <button class="btn btn-danger" type="submit" name=orderDetailId value="@item.Id"><i class="fa-solid fa-trash"></i></button>
-                        </form>
-                        <form asp-area="" asp-controller="Home" asp-action="EditOrderDetail" method="get">
-                            <button class="btn btn-danger editOrderDetailButton" type="button" name="orderDetailId" value="@item.Id" data-toggle="modal" data-target="#editOrderDetailModal"><i class="fa-solid fa-pen"></i></button>
-                        </form>
-                    </td>
-                </tr>
-            }
-            <tr>
-                <td colspan="2">Total Price :</td>
-                <td>@Model.TotalPrice.ToString("C2")</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                        <tr>
+                            <td colspan="2">Total Price :</td>
+                            <td>@Model.TotalPrice.ToString("C2")</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="form-group mb-3">
     @if (Model.Status == OrderStatus.Pending)
     {
         <form asp-area="" asp-controller="Home" asp-action="ConfirmOrder" method="post">
-
             <button type="submit" name="orderId" value="@Model.Id" class="btn btn-primary">Confirm Order</button>
         </form>
     }
@@ -76,11 +108,10 @@
     else if (Model.Status == OrderStatus.Ready)
     {
         Model.Status = OrderStatus.Ready;
-        <button type="submit" name="orderId" value="@Model.Id" class="btn btn-primary" hidden></button>
+        <button type="submit" name="orderId" onclick="openEditOrderDetailModal()" value="@Model.Id" class="btn btn-primary" hidden></button>
     }
 </div>
-
-
+<partial name="_Footer" />
 @section Scripts {
     <script>
         // Show toastr messages
@@ -114,11 +145,14 @@
             }
         }
 
-
         // Show notification for the current Model.Status when the page is loaded
         $(document).ready(function () {
             showNotification('@Model.Status');
         });
+
+        function openEditOrderDetailModal() {
+            $('#editOrderDetailModal').modal('show');
+        }
 
     </script>
 }

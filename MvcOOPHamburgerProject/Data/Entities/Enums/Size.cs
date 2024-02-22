@@ -5,6 +5,7 @@
         Standard,
         Small,
         Medium,
-        Large
+        Large,
+        Mega
     }
 }

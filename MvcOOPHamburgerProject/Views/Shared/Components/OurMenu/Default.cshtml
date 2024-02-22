@@ -16,7 +16,7 @@
             <li>
                 <a asp-area="" asp-controller="Home" asp-action="OurMenu" class="@(Model.SelectedCategoryId == null ? "active" : "")">Menu</a>
             </li>
-            @foreach (var category in Model.Categories)
+            @foreach (var category in Model.Categories!)
             {
                 <li>
                     <a asp-area="" asp-controller="Home" asp-action="OurMenu" asp-route-categoryId="@category.Id" class="@(Model.SelectedCategoryId == category.Id ? "active" : "")">@category.Name</a>
@@ -38,9 +38,9 @@
                                             <img src="~/customer/img/product/@productcardData.ImageUrl" class="card-img-top" alt="...">
                                         </div>
                                         <div class="detail-box">
-                                            <h5>
+                                            <h6>
                                                 @productcardData.Name
-                                            </h5>
+                                            </h6>
                                             <p>
                                                 @productcardData.Category.Name
                                             </p>
@@ -80,9 +80,9 @@
                                             <img src="~/customer/img/menu/@menucardData.ImageUrl" class="card-img-top" alt="...">
                                         </div>
                                         <div class="detail-box">
-                                            <h5>
+                                            <h6>
                                                 @menucardData.Name
-                                            </h5>
+                                            </h6>
                                             <p>
                                                 Menu
                                             </p>
@@ -94,7 +94,7 @@
                                                 <h6>
                                                     <span class="price">@menucardData.Price.ToString("C2")</span>
                                                 </h6>
-                                                <div class="mt-3">
+                                                <div class="mt-2">
                                                     <button type="submit" onclick="addToCart(@menucardData.Id)" name="menuId" value="@menucardData.Id" class="btn-box">
                                                        Add
                                                     </button>

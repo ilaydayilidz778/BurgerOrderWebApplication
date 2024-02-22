@@ -163,29 +163,29 @@ main {
         color: black; /* Siyah */
     }
 
-.register-form .text-danger {
-    color: white;
-}
-
-.login-form button[type="submit"] {
-    background-color: #DAA520; /* Koyu sarý */
-    color: white; /* Siyah */
-    border: none;
-}
-
-    .login-form button[type="submit"]:hover {
-        background: linear-gradient(to right, #B8860B, #DAA520);
+    .login-form .text-danger {
+        color: white;
     }
 
-.login-form a {
-    color: #DAA520; /* Koyu sarý */
-}
+    .login-form button[type="submit"] {
+        background-color: #DAA520; /* Koyu sarý */
+        color: white; /* Siyah */
+        border: none;
+    }
 
-.login-form span {
-    color: white;
-}
+        .login-form button[type="submit"]:hover {
+            background: linear-gradient(to right, #B8860B, #DAA520);
+        }
 
-/* end login section */
+    .login-form a {
+        color: #DAA520; /* Koyu sarý */
+    }
+
+    .login-form span {
+        color: white;
+    }
+
+/* start register section */
 .register-form {
     background-color: black;
     color: white;
@@ -218,11 +218,10 @@ main {
         color: red;
     }
 
-.scrollable-menu {
-    max-height: 200px;
-    overflow-y: auto;
+#citySelect {
+    max-height: 100px; /* Açýlan menünün maksimum yüksekliði */
+    overflow-y: auto; /* Dikey kaydýrma çubuðunu etkinleþtir */
 }
-/* start register section */
 
 /* end register section */
 /* footer */

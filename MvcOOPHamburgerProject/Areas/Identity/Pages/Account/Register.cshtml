@@ -52,19 +52,13 @@
                         <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
                     </div>
                     <div class="mb-5">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Select City
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end scrollable-menu" aria-labelledby="dropdownMenuButton">
-                                @foreach (var city in Model.CityList)
-                                {
-                                    <li><a class="dropdown-item" href="#" data-value="@city.Value">@city.Text</a></li>
-                                }
-                            </ul>
-                            <input type="hidden" asp-for="Input.City" />
-                        <span asp-validation-for="Input.City" class="text-danger"></span>
+                        <div>
+                            <label for="citySelect">Select City:</label>
                         </div>
+                        <select class="form-select" id="citySelect" asp-for="Input.City" asp-items="Model.CityList">
+                                <option value="">Select a city </option>
+                            </select>
+                        <span asp-validation-for="Input.City" class="text-danger"></span>
                     </div>
                 <div>
                 <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary mt-3">Register</button>
@@ -106,13 +100,25 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.dropdown-menu .dropdown-item').click(function () {
-                var selectedCity = $(this).attr('value');
-                var selectedCityText = $(this).text();
-                $('#dropdownMenuButton').text(selectedCityText); // Seçilen şehri dropdown düğmesinin metnine ayarla
-                $('input[name="Input.City"]').val(selectedCity); // Gizli alanın değerini güncelle
+            $(".select-selected").on("click", function (e) {
+                e.stopPropagation();
+                $(this).next(".select-items").toggle();
+            });
+
+            $(".select-items div").on("click", function (e) {
+                e.stopPropagation();
+                var value = $(this).attr("data-value");
+                var text = $(this).text();
+                $(".select-selected").text(text);
+                $("#citySelect").val(value);
+                $(".select-items").hide();
+            });
+
+            $(document).on("click", function () {
+                $(".select-items").hide();
             });
         });
     </script>

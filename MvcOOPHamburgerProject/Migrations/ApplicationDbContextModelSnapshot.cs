@@ -831,51 +831,161 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 1,
-                            ImageUrl = "McChickenMenu.jpg",
-                            Name = "McChicken Menü",
-                            Price = 18.99m,
+                            ImageUrl = "BigMacMenu.jpg",
+                            Name = "Big Mac Menu",
+                            Price = 59.99m,
                             Quantity = 1,
-                            Size = 3,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 2,
-                            ImageUrl = "BigTastyMenu.png",
-                            Name = "Big Tasty Menü",
-                            Price = 15.99m,
+                            ImageUrl = "DoubleBigMacMenu.jpg",
+                            Name = "Double Big Mac Menu",
+                            Price = 92.99m,
                             Quantity = 1,
-                            Size = 2,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 3,
-                            ImageUrl = "DoubleCheeseBurgerMcChickenMenu.png",
-                            Name = "Double Cheeseburger + McChicken® Menü",
-                            Price = 23.99m,
+                            ImageUrl = "DoubleMcEconomicalMenu.jpg",
+                            Name = "Double McEconomical Menu",
+                            Price = 51.99m,
                             Quantity = 1,
-                            Size = 3,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 4,
-                            ImageUrl = "CitirTavukluFirsatMenusu.png",
-                            Name = "Çıtır Tavuklu Fırsat Menüsü",
-                            Price = 17.99m,
+                            ImageUrl = "TripleMcEconomicalMenu.jpg",
+                            Name = "Triple McEconomical Menu",
+                            Price = 74.99m,
                             Quantity = 1,
-                            Size = 1,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 5,
-                            ImageUrl = "UcluMekonomikMenu.png",
-                            Name = "Üçlü Mekonomik Menü",
-                            Price = 21.99m,
+                            ImageUrl = "BurgerwithMeatandCrispyChickenOfferMenu.jpg",
+                            Name = "Burger with Meat and Crispy Chicken Offer Menu",
+                            Price = 13.99m,
                             Quantity = 1,
-                            Size = 3,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ImageUrl = "DoubleBigTastyMenu.jpg",
+                            Name = "Double Big Tasty Menu",
+                            Price = 54.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ImageUrl = "GamerMenu.jpg",
+                            Name = "Gamer Menu",
+                            Price = 86.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ImageUrl = "LegendaryDuo(BigMac+McChicken).jpg",
+                            Name = "Legendary Duo (Big Mac + McChicken) Menu",
+                            Price = 71.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ImageUrl = "TripleBigMacOffer.jpg",
+                            Name = "Triple Big Mac Offer",
+                            Price = 65.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ImageUrl = "DoubleMeatballBurgerMenu.jpg",
+                            Name = "Double Meatball Burger Menu",
+                            Price = 53.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ImageUrl = "MeatballBurgerOfferMenu.jpg",
+                            Name = "Meatball Burger Offer Menu",
+                            Price = 51.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ImageUrl = "CrispyChickenOfferMenu.jpg",
+                            Name = "Crispy Chicken Offer Menu",
+                            Price = 60.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ImageUrl = "ClassicBigTastyMenu.jpg",
+                            Name = "Classic Big Tasty Menu",
+                            Price = 52.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ImageUrl = "ChickenBigTastyMenu.jpg",
+                            Name = "Chicken Big Tasty Menu",
+                            Price = 83.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 15,
+                            ImageUrl = "NationalBurgerMenu.jpg",
+                            Name = "National Burger Menu",
+                            Price = 91.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 16,
+                            ImageUrl = "DoubleSpicyChicken(Classic)Menu.jpg",
+                            Name = "Double Spicy Chicken (Classic) Menu",
+                            Price = 80.99m,
+                            Quantity = 1,
+                            Size = 0,
                             Status = 0
                         });
                 });
@@ -911,112 +1021,469 @@ namespace MvcOOPHamburgerProject.Migrations
                             Id = 1,
                             MenuId = 1,
                             ProductId = 6,
-                            Quantity = 0
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 2,
                             MenuId = 1,
-                            ProductId = 1,
-                            Quantity = 0
+                            ProductId = 7,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 3,
                             MenuId = 1,
-                            ProductId = 2,
-                            Quantity = 0
+                            ProductId = 50,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 4,
                             MenuId = 2,
-                            ProductId = 5,
-                            Quantity = 0
+                            ProductId = 6,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 5,
                             MenuId = 2,
-                            ProductId = 1,
-                            Quantity = 0
+                            ProductId = 6,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 6,
                             MenuId = 2,
-                            ProductId = 2,
-                            Quantity = 0
+                            ProductId = 7,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 7,
-                            MenuId = 3,
-                            ProductId = 8,
-                            Quantity = 0
+                            MenuId = 2,
+                            ProductId = 50,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 8,
                             MenuId = 3,
-                            ProductId = 6,
-                            Quantity = 0
+                            ProductId = 9,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 9,
                             MenuId = 3,
-                            ProductId = 1,
+                            ProductId = 9,
                             Quantity = 2
                         },
                         new
                         {
                             Id = 10,
                             MenuId = 3,
-                            ProductId = 2,
+                            ProductId = 7,
                             Quantity = 2
                         },
                         new
                         {
                             Id = 11,
-                            MenuId = 4,
-                            ProductId = 4,
-                            Quantity = 4
+                            MenuId = 3,
+                            ProductId = 7,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 12,
-                            MenuId = 4,
-                            ProductId = 1,
+                            MenuId = 3,
+                            ProductId = 50,
                             Quantity = 2
                         },
                         new
                         {
                             Id = 13,
-                            MenuId = 4,
-                            ProductId = 2,
-                            Quantity = 0
+                            MenuId = 3,
+                            ProductId = 50,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 14,
-                            MenuId = 5,
-                            ProductId = 8,
-                            Quantity = 3
+                            MenuId = 4,
+                            ProductId = 11,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 15,
-                            MenuId = 5,
-                            ProductId = 1,
-                            Quantity = 3
+                            MenuId = 4,
+                            ProductId = 11,
+                            Quantity = 2
                         },
                         new
                         {
                             Id = 16,
+                            MenuId = 4,
+                            ProductId = 8,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 17,
+                            MenuId = 4,
+                            ProductId = 7,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 18,
+                            MenuId = 4,
+                            ProductId = 7,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 19,
+                            MenuId = 4,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 20,
+                            MenuId = 4,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 21,
                             MenuId = 5,
-                            ProductId = 2,
+                            ProductId = 11,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 22,
+                            MenuId = 5,
+                            ProductId = 11,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 23,
+                            MenuId = 5,
+                            ProductId = 12,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 24,
+                            MenuId = 5,
+                            ProductId = 12,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 25,
+                            MenuId = 5,
+                            ProductId = 7,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 26,
+                            MenuId = 5,
+                            ProductId = 13,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 27,
+                            MenuId = 5,
+                            ProductId = 13,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 28,
+                            MenuId = 5,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 29,
+                            MenuId = 5,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 30,
+                            MenuId = 6,
+                            ProductId = 3,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 31,
+                            MenuId = 6,
+                            ProductId = 4,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 32,
+                            MenuId = 6,
+                            ProductId = 7,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 33,
+                            MenuId = 6,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 34,
+                            MenuId = 7,
+                            ProductId = 6,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 35,
+                            MenuId = 7,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 36,
+                            MenuId = 7,
+                            ProductId = 14,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 37,
+                            MenuId = 7,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 38,
+                            MenuId = 8,
+                            ProductId = 6,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 39,
+                            MenuId = 8,
+                            ProductId = 8,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 40,
+                            MenuId = 8,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 41,
+                            MenuId = 8,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 42,
+                            MenuId = 9,
+                            ProductId = 6,
                             Quantity = 3
+                        },
+                        new
+                        {
+                            Id = 43,
+                            MenuId = 9,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 44,
+                            MenuId = 9,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 45,
+                            MenuId = 10,
+                            ProductId = 15,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 46,
+                            MenuId = 10,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 47,
+                            MenuId = 10,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 48,
+                            MenuId = 11,
+                            ProductId = 11,
+                            Quantity = 4
+                        },
+                        new
+                        {
+                            Id = 49,
+                            MenuId = 11,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 50,
+                            MenuId = 11,
+                            ProductId = 13,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 51,
+                            MenuId = 11,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 52,
+                            MenuId = 12,
+                            ProductId = 12,
+                            Quantity = 4
+                        },
+                        new
+                        {
+                            Id = 53,
+                            MenuId = 12,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 54,
+                            MenuId = 12,
+                            ProductId = 13,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 55,
+                            MenuId = 12,
+                            ProductId = 50,
+                            Quantity = 2
+                        },
+                        new
+                        {
+                            Id = 56,
+                            MenuId = 13,
+                            ProductId = 3,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 57,
+                            MenuId = 13,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 58,
+                            MenuId = 13,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 59,
+                            MenuId = 14,
+                            ProductId = 4,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 60,
+                            MenuId = 14,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 61,
+                            MenuId = 14,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 62,
+                            MenuId = 15,
+                            ProductId = 16,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 63,
+                            MenuId = 15,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 64,
+                            MenuId = 15,
+                            ProductId = 50,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 65,
+                            MenuId = 16,
+                            ProductId = 17,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 66,
+                            MenuId = 16,
+                            ProductId = 7,
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            Id = 67,
+                            MenuId = 16,
+                            ProductId = 50,
+                            Quantity = 1
                         });
                 });
 
@@ -1124,32 +1591,32 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 1,
-                            CategoryId = 5,
-                            ImageUrl = "Cola.png",
-                            Name = "Cola",
-                            Price = 2.99m,
+                            CategoryId = 1,
+                            ImageUrl = "ClassicBigTasty.jpg",
+                            Name = "Classic Big Tasty",
+                            Price = 9.99m,
                             Quantity = 1,
-                            Size = 1,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 2,
-                            CategoryId = 4,
-                            ImageUrl = "FrenchFries.png",
-                            Name = "French Fries",
-                            Price = 1.99m,
+                            CategoryId = 1,
+                            ImageUrl = "ChickenBigTasty.jpg",
+                            Name = "Chicken Big Tasty",
+                            Price = 10.99m,
                             Quantity = 1,
-                            Size = 2,
+                            Size = 0,
                             Status = 0
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 1,
-                            ImageUrl = "DoubleBeefBurger.jpg",
-                            Name = "Double Beef Burger",
-                            Price = 23.99m,
+                            ImageUrl = "DoubleSpicyChicken(Classic).jpg",
+                            Name = "Double Spicy Chicken (Classic)",
+                            Price = 12.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1158,9 +1625,9 @@ namespace MvcOOPHamburgerProject.Migrations
                         {
                             Id = 4,
                             CategoryId = 1,
-                            ImageUrl = "CrispyChickenExtra.jpg",
-                            Name = "Crispy Chicken Extra",
-                            Price = 17.99m,
+                            ImageUrl = "NationalBurger.jpg",
+                            Name = "National Burger",
+                            Price = 8.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1169,9 +1636,9 @@ namespace MvcOOPHamburgerProject.Migrations
                         {
                             Id = 5,
                             CategoryId = 1,
-                            ImageUrl = "ClassicBigTasty.png",
-                            Name = "Classic Big Tasty",
-                            Price = 21.99m,
+                            ImageUrl = "SpicyChicken(Classic).jpg",
+                            Name = "Spicy Chicken (Classic)",
+                            Price = 7.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1182,7 +1649,7 @@ namespace MvcOOPHamburgerProject.Migrations
                             CategoryId = 1,
                             ImageUrl = "McChicken.jpg",
                             Name = "McChicken",
-                            Price = 14.99m,
+                            Price = 6.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1191,9 +1658,9 @@ namespace MvcOOPHamburgerProject.Migrations
                         {
                             Id = 7,
                             CategoryId = 1,
-                            ImageUrl = "ChickenBigTasty.jpg",
-                            Name = "Chicken Big Tasty",
-                            Price = 16.99m,
+                            ImageUrl = "CrispyChickenBurger.jpg",
+                            Name = "Crispy Chicken Burger",
+                            Price = 5.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1202,9 +1669,20 @@ namespace MvcOOPHamburgerProject.Migrations
                         {
                             Id = 8,
                             CategoryId = 1,
-                            ImageUrl = "DoubleCheeseburger.jpg",
-                            Name = "Double Cheeseburger",
-                            Price = 9.99m,
+                            ImageUrl = "QuarterPounder.jpg",
+                            Name = "Quarter Pounder",
+                            Price = 8.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 1,
+                            ImageUrl = "DoubleBeefBurger.jpg",
+                            Name = "Double Beef Burger",
+                            Price = 11.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1212,10 +1690,10 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 10,
-                            CategoryId = 5,
-                            ImageUrl = "Sprite.png",
-                            Name = "Sprite",
-                            Price = 5.99m,
+                            CategoryId = 1,
+                            ImageUrl = "BeefBurger.jpg",
+                            Name = "Beef Burger",
+                            Price = 7.49m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1223,10 +1701,10 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 11,
-                            CategoryId = 2,
-                            ImageUrl = "BlueberrySauceIceCream.png",
-                            Name = "Blueberry Sauce Ice Cream",
-                            Price = 7.99m,
+                            CategoryId = 1,
+                            ImageUrl = "DabaDabaBurger.jpg",
+                            Name = "Daba Daba Burger",
+                            Price = 10.49m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1234,10 +1712,10 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 12,
-                            CategoryId = 2,
-                            ImageUrl = "CaramelSauceIceCream.png",
-                            Name = "Caramel Sauce Ice Cream",
-                            Price = 7.99m,
+                            CategoryId = 1,
+                            ImageUrl = "DoubleBigMac.jpg",
+                            Name = "Double Big Mac",
+                            Price = 12.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0
@@ -1245,10 +1723,780 @@ namespace MvcOOPHamburgerProject.Migrations
                         new
                         {
                             Id = 13,
-                            CategoryId = 5,
-                            ImageUrl = "OreoMilkshake.png",
-                            Name = "Oreo Milkshake",
+                            CategoryId = 1,
+                            ImageUrl = "DoubleCheeseburger.jpg",
+                            Name = "Double Cheeseburger",
+                            Price = 9.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 1,
+                            ImageUrl = "DoubleMcChicken.jpg",
+                            Name = "Double McChicken",
+                            Price = 10.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CategoryId = 1,
+                            ImageUrl = "DoubleQuarterPounder.jpg",
+                            Name = "Double Quarter Pounder",
+                            Price = 11.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CategoryId = 1,
+                            ImageUrl = "BigMac.jpg",
+                            Name = "Big Mac",
+                            Price = 9.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CategoryId = 1,
+                            ImageUrl = "Hamburger.jpg",
+                            Name = "Hamburger",
                             Price = 5.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CategoryId = 1,
+                            ImageUrl = "Cheeseburger.jpg",
+                            Name = "Cheeseburger",
+                            Price = 6.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CategoryId = 2,
+                            ImageUrl = "ForestFruitMuffin.jpg",
+                            Name = "Forest Fruit Muffin",
+                            Price = 3.79m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CategoryId = 2,
+                            ImageUrl = "StrawberryFilledWhiteChocolateDonut.jpg",
+                            Name = "Strawberry Filled White Chocolate Donut",
+                            Price = 4.29m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CategoryId = 2,
+                            ImageUrl = "StrawberryWhiteChocolateDecoratedDonut.jpg",
+                            Name = "Strawberry White Chocolate Decorated Donut",
+                            Price = 4.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CategoryId = 2,
+                            ImageUrl = "ChocolateCake.jpg",
+                            Name = "Chocolate Cake",
+                            Price = 6.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CategoryId = 2,
+                            ImageUrl = "HazelnutCreamFilledCocoaDonut.jpg",
+                            Name = "Hazelnut Cream Filled Cocoa Donut",
+                            Price = 3.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CategoryId = 2,
+                            ImageUrl = "Brownie.jpg",
+                            Name = "Brownie",
+                            Price = 4.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CategoryId = 2,
+                            ImageUrl = "ChocolateMuffin.jpg",
+                            Name = "Chocolate Muffin",
+                            Price = 3.79m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CategoryId = 2,
+                            ImageUrl = "CarrotCake.jpg",
+                            Name = "Carrot Cake",
+                            Price = 4.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CategoryId = 2,
+                            ImageUrl = "HazelnutCookie.jpg",
+                            Name = "Hazelnut Cookie",
+                            Price = 2.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CategoryId = 2,
+                            ImageUrl = "RaspberryChocolateCake.jpg",
+                            Name = "Raspberry Chocolate Cake",
+                            Price = 6.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CategoryId = 2,
+                            ImageUrl = "TripleChocolateCookie.jpg",
+                            Name = "Triple Chocolate Cookie",
+                            Price = 2.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CategoryId = 2,
+                            ImageUrl = "SenSebastianCheesecake.jpg",
+                            Name = "SenSebastian Cheesecake",
+                            Price = 6.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CategoryId = 2,
+                            ImageUrl = "RedVelvetCake.jpg",
+                            Name = "Red Velvet Cake",
+                            Price = 6.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CategoryId = 2,
+                            ImageUrl = "Tiramisu.jpg",
+                            Name = "Tiramisu",
+                            Price = 5.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CategoryId = 3,
+                            ImageUrl = "Ketchup(Packet).jpg",
+                            Name = "Ketchup (Packet)",
+                            Price = 0.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CategoryId = 3,
+                            ImageUrl = "Mayonnaise(Packet).jpg",
+                            Name = "Mayonnaise (Packet)",
+                            Price = 0.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CategoryId = 3,
+                            ImageUrl = "GarlicMayonnaise(Packet).jpg",
+                            Name = "Garlic Mayonnaise (Packet)",
+                            Price = 1.29m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CategoryId = 3,
+                            ImageUrl = "HotSauce(Packet).jpg",
+                            Name = "Hot Sauce (Packet)",
+                            Price = 1.29m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CategoryId = 3,
+                            ImageUrl = "BarbecueSauce.jpg",
+                            Name = "Barbecue Sauce",
+                            Price = 2.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CategoryId = 3,
+                            ImageUrl = "MustardSauce.jpg",
+                            Name = "Mustard Sauce",
+                            Price = 1.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CategoryId = 3,
+                            ImageUrl = "RanchSauce.jpg",
+                            Name = "Ranch Sauce",
+                            Price = 2.29m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 45,
+                            CategoryId = 3,
+                            ImageUrl = "BuffaloSauce.jpg",
+                            Name = "Buffalo Sauce",
+                            Price = 2.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 46,
+                            CategoryId = 4,
+                            ImageUrl = "LargeFrenchFries.jpg",
+                            Name = "Large French Fries",
+                            Price = 4.99m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 47,
+                            CategoryId = 4,
+                            ImageUrl = "MediumFrenchFries.jpg",
+                            Name = "Medium French Fries",
+                            Price = 3.99m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CategoryId = 4,
+                            ImageUrl = "SmallFrenchFries.jpg",
+                            Name = "Small French Fries",
+                            Price = 2.99m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 49,
+                            CategoryId = 4,
+                            ImageUrl = "CrispyOnions(8-piece).jpg",
+                            Name = "Crispy Onions (8-piece)",
+                            Price = 5.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CategoryId = 4,
+                            ImageUrl = "CrispyOnions(12-piece).jpg",
+                            Name = "Crispy Onions (12-piece)",
+                            Price = 7.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 51,
+                            CategoryId = 4,
+                            ImageUrl = "CrispyOnions(16-piece).jpg",
+                            Name = "Crispy Onions (16-piece)",
+                            Price = 9.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CategoryId = 4,
+                            ImageUrl = "WaffleFries(Large).jpg",
+                            Name = "Waffle Fries (Large)",
+                            Price = 5.99m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 53,
+                            CategoryId = 4,
+                            ImageUrl = "WaffleFries(Medium).jpg",
+                            Name = "Waffle Fries (Medium)",
+                            Price = 4.99m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CategoryId = 4,
+                            ImageUrl = "WaffleFries(Small).jpg",
+                            Name = "Waffle Fries (Small)",
+                            Price = 3.99m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 55,
+                            CategoryId = 4,
+                            ImageUrl = "2-PieceCrispyTenders.jpg",
+                            Name = "2-Piece Crispy Tenders",
+                            Price = 6.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CategoryId = 4,
+                            ImageUrl = "4-PieceCrispyTenders.jpg",
+                            Name = "4-Piece Crispy Tenders",
+                            Price = 10.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 57,
+                            CategoryId = 5,
+                            ImageUrl = "Mixology(Mango).jpg",
+                            Name = "Mixology (Mango)",
+                            Price = 15.99m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CategoryId = 5,
+                            ImageUrl = "Mixology(Strawberry).jpg",
+                            Name = "Mixology (Strawberry)",
+                            Price = 12.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 59,
+                            CategoryId = 5,
+                            ImageUrl = "Mixology(Mint).jpg",
+                            Name = "Mixology (Mint)",
+                            Price = 18.79m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-ColaZeroSugar(Small).jpg",
+                            Name = "Coca-Cola Zero Sugar (Small)",
+                            Price = 11.99m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 61,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-ColaZeroSugar(Medium).jpg",
+                            Name = "Coca-Cola Zero Sugar (Medium)",
+                            Price = 13.29m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-ColaZeroSugar(Large).jpg",
+                            Name = "Coca-Cola Zero Sugar (Large)",
+                            Price = 14.99m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 63,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-Cola(Small).jpg",
+                            Name = "Coca-Cola (Small)",
+                            Price = 12.49m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-Cola(Medium).jpg",
+                            Name = "Coca-Cola (Medium)",
+                            Price = 11.79m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 65,
+                            CategoryId = 5,
+                            ImageUrl = "Coca-Cola(Large).jpg",
+                            Name = "Coca-Cola (Large)",
+                            Price = 15.49m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CategoryId = 5,
+                            ImageUrl = "Fanta(Small).jpg",
+                            Name = "Fanta (Small)",
+                            Price = 10.99m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 67,
+                            CategoryId = 5,
+                            ImageUrl = "Fanta(Medium).jpg",
+                            Name = "Fanta (Medium)",
+                            Price = 12.29m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CategoryId = 5,
+                            ImageUrl = "Fanta(Large).jpg",
+                            Name = "Fanta (Large)",
+                            Price = 13.49m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CategoryId = 5,
+                            ImageUrl = "Sprite(Small).jpg",
+                            Name = "Sprite (Small)",
+                            Price = 11.49m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CategoryId = 5,
+                            ImageUrl = "Sprite(Medium).jpg",
+                            Name = "Sprite (Medium)",
+                            Price = 14.99m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CategoryId = 5,
+                            ImageUrl = "Sprite(Large).jpg",
+                            Name = "Sprite (Large)",
+                            Price = 16.79m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaPeach(Small).jpg",
+                            Name = "Fuse Tea Peach (Small)",
+                            Price = 10.49m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaPeach(Medium).jpg",
+                            Name = "Fuse Tea Peach (Medium)",
+                            Price = 12.99m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaPeach(Large).jpg",
+                            Name = "Fuse Tea Peach (Large)",
+                            Price = 14.49m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaLemon(Small).jpg",
+                            Name = "Fuse Tea Lemon (Small)",
+                            Price = 11.29m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaLemon(Medium).jpg",
+                            Name = "Fuse Tea Lemon (Medium)",
+                            Price = 13.79m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CategoryId = 5,
+                            ImageUrl = "FuseTeaLemon(Large).jpg",
+                            Name = "Fuse Tea Lemon (Large)",
+                            Price = 15.99m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CategoryId = 5,
+                            ImageUrl = "StrawberryMilkshake(Small).jpg",
+                            Name = "Strawberry Milkshake (Small)",
+                            Price = 17.49m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 79,
+                            CategoryId = 5,
+                            ImageUrl = "StrawberryMilkshake(Medium).jpg",
+                            Name = "Strawberry Milkshake (Medium)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CategoryId = 5,
+                            ImageUrl = "StrawberryMilkshake(Large).jpg",
+                            Name = "Strawberry Milkshake (Large)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CategoryId = 5,
+                            ImageUrl = "CoffeeMilkshake(Small).jpg",
+                            Name = "Coffee Milkshake (Small)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CategoryId = 5,
+                            ImageUrl = "CoffeeMilkshake(Medium).jpg",
+                            Name = "Coffee Milkshake (Medium)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 83,
+                            CategoryId = 5,
+                            ImageUrl = "CoffeeMilkshake(Large).jpg",
+                            Name = "Coffee Milkshake (Large)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 84,
+                            CategoryId = 5,
+                            ImageUrl = "ChocolateMilkshake(Small).jpg",
+                            Name = "Chocolate Milkshake (Small)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 85,
+                            CategoryId = 5,
+                            ImageUrl = "ChocolateMilkshake(Medium).jpg",
+                            Name = "Chocolate Milkshake (Medium)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 2,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 86,
+                            CategoryId = 5,
+                            ImageUrl = "ChocolateMilkshake(Large).jpg",
+                            Name = "Chocolate Milkshake (Large)",
+                            Price = 0m,
+                            Quantity = 1,
+                            Size = 3,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 87,
+                            CategoryId = 5,
+                            ImageUrl = "Water.jpg",
+                            Name = "Water",
+                            Price = 2.49m,
+                            Quantity = 1,
+                            Size = 0,
+                            Status = 0
+                        },
+                        new
+                        {
+                            Id = 88,
+                            CategoryId = 5,
+                            ImageUrl = "Ayran.jpg",
+                            Name = "Ayran",
+                            Price = 1.99m,
                             Quantity = 1,
                             Size = 0,
                             Status = 0

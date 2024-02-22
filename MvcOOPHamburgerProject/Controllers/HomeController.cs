@@ -151,7 +151,7 @@ namespace MvcOOPHamburgerProject.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin, Customer")]
+       
         public async Task<IActionResult> Card()
         {
             try
@@ -179,7 +179,7 @@ namespace MvcOOPHamburgerProject.Controllers
                     {
 
                         TempData["ErrorMessage"] = "Your cart is currently empty.";
-                        return RedirectToAction("Index", "Home"); // Deðiþiklik: Boþ sepet durumunda anasayfaya yönlendirme
+                        return RedirectToAction("Card", "Home"); // Deðiþiklik: Boþ sepet durumunda anasayfaya yönlendirme
                     }
                 }
 
@@ -193,7 +193,7 @@ namespace MvcOOPHamburgerProject.Controllers
                 if (order == null)
                 {
                     TempData["ErrorMessage"] = "Order not found.";
-                    return RedirectToAction("Index", "Home"); // Deðiþiklik: Sipariþ bulunamadýðýnda anasayfaya yönlendirme
+                    return RedirectToAction("Card", "Home"); 
                 }
 
                 decimal totalPrice = 0;
@@ -217,7 +217,7 @@ namespace MvcOOPHamburgerProject.Controllers
             catch (Exception ex)
             {
                 TempData["ErrorMessage"] = "An error occurred while processing your request.";
-                return RedirectToAction("Index", "Home"); // Deðiþiklik: Hata durumunda anasayfaya yönlendirme
+                return RedirectToAction("Index", "Home"); 
             }
 
         }
